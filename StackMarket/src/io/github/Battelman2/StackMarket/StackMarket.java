@@ -5,11 +5,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class StackMarket extends JavaPlugin
 {
 	
+	// Last digit of version number represents build number
+	// Build number should be incremented every time the project is exported to jar.
 	private static String version;
-	
-	// Increment build each time after exporting to jar. Build # resets for every new build.
-	// Do not increment on push to repository.
-	private static String build;
 	
 	private StackMarketCommandExecutor commandExecutor;
 	
@@ -22,8 +20,7 @@ public class StackMarket extends JavaPlugin
 	@Override
 	public void onEnable()
 	{
-		version = "1.0.0";
-		build = "4";
+		version = "1.0.0.4";
 		
 		commandExecutor = new StackMarketCommandExecutor();
 		
@@ -39,11 +36,6 @@ public class StackMarket extends JavaPlugin
 	public static String getVersion()
 	{
 		return version;
-	}
-	
-	public static String getBuild()
-	{
-		return build;
 	}
 	
 }

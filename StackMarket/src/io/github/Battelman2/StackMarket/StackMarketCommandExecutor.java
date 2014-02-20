@@ -21,7 +21,7 @@ public class StackMarketCommandExecutor implements CommandExecutor
 			// Status Command
 			if(args.length == 0)
 			{
-				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + StackMarket.getVersion() + ChatColor.GRAY + " build " + ChatColor.AQUA + StackMarket.getBuild() + ChatColor.GRAY +"\nType \"/sm help\" for StackMarket commands.");
+				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + StackMarket.getVersion() + ChatColor.GRAY + "\nType \"/sm help\" for StackMarket commands.");
 				return true;
 			}
 			// Help Command
