@@ -1,3 +1,9 @@
 name: StackMarket
 main: io.github.Battelman2.StackMarket.StackMarket
 version: 1.0.0
+commands:
+  sm:
+      description: Displays status of StackMarket.
+      usage: /sm
+      permission: StackMarket.sm
+      permission-message: You don't have permission to use /sm
