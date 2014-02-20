@@ -13,11 +13,13 @@ public class StackMarket extends JavaPlugin
 	
 	private StackMarketCommandExecutor commandExecutor;
 	
+	@Override
 	public void onLoad()
 	{
 		
 	}
 	
+	@Override
 	public void onEnable()
 	{
 		version = "1.0.0";
@@ -28,6 +30,7 @@ public class StackMarket extends JavaPlugin
 		getCommand("sm").setExecutor(commandExecutor);
 	}
 	
+	@Override
 	public void onDisable()
 	{
 		
