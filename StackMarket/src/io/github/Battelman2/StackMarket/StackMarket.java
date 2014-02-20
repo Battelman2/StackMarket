@@ -7,7 +7,8 @@ public class StackMarket extends JavaPlugin
 	
 	private static String version;
 	
-	// Increment build every time StackMarket is exported to jar. Build # is independednt from version.
+	// Increment build every time StackMarket is exported to jar. Build # resets for every new released build.
+	// Do not increment on push to repository.
 	private static String build;
 	
 	public void onLoad()

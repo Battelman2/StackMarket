@@ -20,7 +20,7 @@ public class StackMarketCommandExecutor implements CommandExecutor
 		{
 			if(args.length == 0)
 			{
-				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + StackMarket.getVersion());
+				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + StackMarket.getVersion() + ChatColor.GRAY + " build " + ChatColor.AQUA + StackMarket.getBuild());
 				return true;
 			}
 		}
