@@ -1,4 +1,4 @@
-package io.github.Battelman2.StackMarket;
+package io.github.Battelman2.Minecommerce;
 
 public class Stock implements Security {
 

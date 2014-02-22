@@ -1,9 +1,9 @@
-name: StackMarket
-main: io.github.Battelman2.StackMarket.StackMarket
+name: Minecommerce
+main: io.github.Battelman2.Minecommerce.Minecommerce
 version: 1.0.0
 commands:
-  sm:
-      description: Displays status of StackMarket.
-      usage: /sm
-      permission: StackMarket.sm
-      permission-message: You don't have permission to use /sm
+  commerce:
+      description: Displays status of Minecommerce.
+      usage: /commerce
+      permission: Minecommerce.commerce
+      permission-message: You don't have permission to use /commerce

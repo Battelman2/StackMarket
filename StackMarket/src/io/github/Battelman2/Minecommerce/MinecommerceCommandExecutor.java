@@ -1,14 +1,14 @@
-package io.github.Battelman2.StackMarket;
+package io.github.Battelman2.Minecommerce;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class StackMarketCommandExecutor implements CommandExecutor
+public class MinecommerceCommandExecutor implements CommandExecutor
 {
 
-	public StackMarketCommandExecutor()
+	public MinecommerceCommandExecutor()
 	{
 		
 	}
@@ -21,7 +21,7 @@ public class StackMarketCommandExecutor implements CommandExecutor
 			// Status Command
 			if(args.length == 0)
 			{
-				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + StackMarket.getVersion() + ChatColor.GRAY + "\nType \"/sm help\" for StackMarket commands.");
+				sender.sendMessage(ChatColor.GRAY + "StackMarket is currently " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA + Minecommerce.getVersion() + ChatColor.GRAY + "\nType \"/sm help\" for StackMarket commands.");
 				return true;
 			}
 			// Help Command
