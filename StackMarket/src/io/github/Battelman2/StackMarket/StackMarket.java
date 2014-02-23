@@ -1,15 +1,17 @@
-package io.github.Battelman2.Minecommerce;
+package io.github.Battelman2.StackMarket;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class Minecommerce extends JavaPlugin
+public class StackMarket extends JavaPlugin
 {
 	
 	// Last digit of version number represents build number
 	// Build number should be incremented every time the project is exported to jar.
 	private static String version;
 	
-	private MinecommerceCommandExecutor commandExecutor;
+	private StackMarketCommandExecutor commandExecutor;
+	
+	// StackMarket Class Implementations
 	
 	@Override
 	public void onLoad()
@@ -22,9 +24,10 @@ public class Minecommerce extends JavaPlugin
 	{
 		version = "1.0.0.4";
 		
-		commandExecutor = new MinecommerceCommandExecutor();
+		commandExecutor = new StackMarketCommandExecutor();
 		
-		getCommand("sm").setExecutor(commandExecutor);
+		getCommand("stackmarket").setExecutor(commandExecutor);
+		getCommand("business").setExecutor(commandExecutor);
 	}
 	
 	@Override
