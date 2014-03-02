@@ -10,7 +10,7 @@ public class StackMarket extends JavaPlugin
 {
     public void onLoad()
     {
-        getLogger().info(getDescription().getName() + " has been loaded.");
+        getLogger().info(getDescription().getName() + " has been loaded with version 1.0.0.");
     }
 
     public void onEnable()
