@@ -15,6 +15,11 @@ public class StackMarket extends JavaPlugin
 
     public void onEnable()
     {
+        StackMarketCommandExecutor commandExecutor = new StackMarketCommandExecutor();
+
+        getCommand("stackmarket").setExecutor(commandExecutor);
+        getCommand("business").setExecutor(commandExecutor);
+
         getLogger().info(getDescription().getName() + " has been enabled.");
     }
 

@@ -1,3 +1,16 @@
 name: StackMarket
 main: io.github.Battelman2.StackMarket.StackMarket
 version: 1.0.0
+commands:
+  stackmarket:
+      description: Displays status of StackMarket.
+      usage: /stackmarket
+      aliases: [market, sm, stack]
+      permission: StackMarket.stackmarket
+      permission-message: You don't have permission to use /stackmarket
+  business:
+      description: All commands related to businesses.
+      usage: /business help
+      aliases: [biz, company]
+      permission: StackMarket.business
+      permission-message: You don't have permission to use /business
