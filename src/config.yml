@@ -1,0 +1,13 @@
+# StackMarket Configuration File
+#
+# All comments (lines ignored by server) are denoted with the # prefix such as this one.
+# Please do not add or removing #s to existing lines.
+#
+
+# Database Configuration. Do not change unless needed.
+database:
+  username: bukkit
+  isolation: SERIALIZABLE
+  driver: org.sqlite.JDBC
+  password: walrus
+  url: jdbc:sqlite:{DIR}{NAME}.db
