@@ -5,21 +5,28 @@ package io.github.Battelman2.StackMarket;
  */
 public enum Ranks
 {
-    INTERN("intern", true, true, false, false, false, false, false),
-    WORKER("worker", true, true, true, false, false, false, false),
-    ASSISTANT("assistant", true, true, true, true, true, false, false),
-    MANAGER("manager", true, true, true, true, true, true, false),
-    OWNER("owner", true, true, true, true, true, true, true);
+    INTERN("intern", "Intern", true, true, false, false, false, false, false),
+    WORKER("worker", "Worker", true, true, true, false, false, false, false),
+    ASSISTANT("assistant", "Assistant", true, true, true, true, true, false, false),
+    MANAGER("manager", "Manager", true, true, true, true, true, true, false),
+    OWNER("owner", "Owner", true, true, true, true, true, true, true);
 
-    private String title;
+    private String dbname;
+    private String fullName;
 
-    Ranks(String _title, boolean containers, boolean redstone, boolean build, boolean land, boolean shop, boolean hire, boolean close)
+    Ranks(String _dbname, String _fullName, boolean containers, boolean redstone, boolean build, boolean land, boolean shop, boolean hire, boolean close)
     {
-        title = _title;
+        dbname = _dbname;
+        fullName = _fullName;
     }
 
-    public String getTitle()
+    public String getDbname()
     {
-        return title;
+        return dbname;
+    }
+
+    public String getFullName()
+    {
+        return fullName;
     }
 }

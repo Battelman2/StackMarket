@@ -52,20 +52,28 @@ public class Business
 
     public enum types
     {
-        SOLEPROPRIETORSHIP(0, 1, false),
-        LIMITEDLIABILITYCOMPANY(1, 3, false),
-        CORPORATION(2, 1, true);
+        SOLEPROPRIETORSHIP(0, 1, false, "Sole Proprietorship"),
+        LIMITEDLIABILITYCOMPANY(1, 3, false, "LLC"),
+        CORPORATION(2, 1, true, "Corporation");
 
         private int typeInt;
 
-        types(int _type, int _owners, boolean _stocks)
+        private String fullName;
+
+        types(int _type, int _owners, boolean _stocks, String _fullName)
         {
             typeInt = _type;
+            fullName = _fullName;
         }
 
         public int getTypeInt()
         {
             return typeInt;
+        }
+
+        public String getFullName()
+        {
+            return fullName;
         }
     }
 
