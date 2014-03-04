@@ -37,6 +37,10 @@ public class StackMarketCommandExecutor implements CommandExecutor
                 {
                     return this.create(sender, args);
                 }
+                else if(args[0].equalsIgnoreCase("close"))
+                {
+                    return this.close(sender);
+                }
             }
         }
 
@@ -45,6 +49,23 @@ public class StackMarketCommandExecutor implements CommandExecutor
 
     // Command Sub-Methods
 
+    // All Sub-Methods are below.
+
+    // Sub-Methods are in order by onCommand if-else
+
+    // Sub-Methods are only passed necessary parameters
+
+
+    /**
+     *
+     * @param sender Command sender. Can be Player or Console.
+     * @param args Command Arguments.
+     *
+     *          Command: /biz help [command]
+     *          Description: Display StackMarket commands.
+     *
+     * @return
+     */
     public boolean help(CommandSender sender, String args[])
     {
         if (args.length == 1)
@@ -90,6 +111,16 @@ public class StackMarketCommandExecutor implements CommandExecutor
         }
     }
 
+    /**
+     *
+     * @param sender Command sender. Can be Player.
+     * @param args Command Arguments.
+     *
+     *          Command: /biz create <name> <type>
+     *          Description: Creates a new business of name <name> and of type <type> with sender as owner.
+     *
+     * @return
+     */
     public boolean create(CommandSender sender, String[] args)
     {
         if(args.length == 3)
@@ -110,6 +141,10 @@ public class StackMarketCommandExecutor implements CommandExecutor
                     StackMarket.plugin().getDatabase().save(biz);
                     sender.sendMessage(ChatColor.DARK_AQUA + "Created new business.");
 
+                    Employee employee = Employee.employeeFromProperties(biz.getId(), sender.getName(), Ranks.OWNER.getDbname());
+                    StackMarket.plugin().getDatabase().save(employee);
+                    sender.sendMessage(ChatColor.GREEN + "You now work for " + biz.getName() + " " + Business.types.SOLEPROPRIETORSHIP.getFullName() + " as " + Ranks.OWNER.getFullName() + ".");
+
                     return true;
 
                 }
@@ -127,6 +162,10 @@ public class StackMarketCommandExecutor implements CommandExecutor
                     StackMarket.plugin().getDatabase().save(biz);
                     sender.sendMessage(ChatColor.DARK_AQUA + "Created new business.");
 
+                    Employee employee = Employee.employeeFromProperties(biz.getId(), sender.getName(), Ranks.OWNER.getDbname());
+                    StackMarket.plugin().getDatabase().save(employee);
+                    sender.sendMessage(ChatColor.GREEN + "You now work for " + biz.getName() + " " + Business.types.LIMITEDLIABILITYCOMPANY.getFullName() + " as " + Ranks.OWNER.getFullName() + ".");
+
                     return true;
                 }
                 else if(args[2].equalsIgnoreCase("corp"))
@@ -143,6 +182,10 @@ public class StackMarketCommandExecutor implements CommandExecutor
                     StackMarket.plugin().getDatabase().save(biz);
                     sender.sendMessage(ChatColor.DARK_AQUA + "Created new business.");
 
+                    Employee employee = Employee.employeeFromProperties(biz.getId(), sender.getName(), Ranks.OWNER.getDbname());
+                    StackMarket.plugin().getDatabase().save(employee);
+                    sender.sendMessage(ChatColor.GREEN + "You now work for " + biz.getName() + " " + Business.types.CORPORATION.getFullName() + " as " + Ranks.OWNER.getFullName() + ".");
+
                     return true;
                 }
                 else
@@ -151,6 +194,11 @@ public class StackMarketCommandExecutor implements CommandExecutor
                 }
             }
         }
+        return false;
+    }
+
+    public boolean close(CommandSender sender)
+    {
         return false;
     }
 
