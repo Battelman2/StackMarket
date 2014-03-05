@@ -1,7 +1,7 @@
 package io.github.Battelman2.StackMarket;
 
 /**
- * Created by williambattel on 3/2/14.
+ * Created by Battelman2 on 3/2/14.
  */
 public enum Ranks
 {

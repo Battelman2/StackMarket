@@ -19,14 +19,15 @@ public class Employee
     /**
      * Factory method that creates a new Employee instance given a bid, name, and rank
      * @param _bid The id of the business.
+     * @param _onShift Is the employee on shift for the bid?
      * @param _name The name of the employee.
      * @param _rank The rank in said business.
      * @return Employee
      */
-    public static Employee employeeFromProperties(int _bid, String _name, String _rank)
+    public static Employee employeeFromProperties(int _bid, boolean _onShift, String _name, String _rank)
     {
         Employee employee = new Employee();
-        employee.setProperties(_bid, _name, _rank);
+        employee.setProperties(_bid, _onShift, _name, _rank);
         return employee;
     }
 
@@ -36,40 +37,26 @@ public class Employee
     @NotNull
     private int bid;
 
+    private boolean onShift;
+
     @NotNull
     private String name;
 
     @NotNull
     private String rank;
 
-    public String getRank()
+    /**
+     * Sets the properties of an Employee instance
+     * @param _bid The id of the business.
+     * @param _name The name of the employee.
+     * @param _rank The rank in said business.
+     */
+    public void setProperties(int _bid, boolean _onShift, String _name, String _rank)
     {
-        return rank;
-    }
-
-    public void setRank(String rank)
-    {
-        this.rank = rank;
-    }
-
-    public String getName()
-    {
-        return name;
-    }
-
-    public void setName(String name)
-    {
-        this.name = name;
-    }
-
-    public int getBid()
-    {
-        return bid;
-    }
-
-    public void setBid(int bid)
-    {
-        this.bid = bid;
+        this.setBid(_bid);
+        this.setShift(_onShift);
+        this.setName(_name);
+        this.setRank(_rank);
     }
 
     public int getId()
@@ -82,16 +69,43 @@ public class Employee
         this.id = id;
     }
 
-    /**
-     * Sets the properties of an Employee instance
-     * @param _bid The id of the business.
-     * @param _name The name of the employee.
-     * @param _rank The rank in said business.
-     */
-    public void setProperties(int _bid, String _name, String _rank)
+    public int getBid()
     {
-        this.setBid(_bid);
-        this.setName(_name);
-        this.setRank(_rank);
+        return bid;
+    }
+
+    public void setBid(int bid)
+    {
+        this.bid = bid;
+    }
+
+    public boolean getShift()
+    {
+        return onShift;
+    }
+
+    public void setShift(boolean onShift)
+    {
+        this.onShift = onShift;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public String getRank()
+    {
+        return rank;
+    }
+
+    public void setRank(String rank)
+    {
+        this.rank = rank;
     }
 }

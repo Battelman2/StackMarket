@@ -4,7 +4,7 @@ version: 0.0.1
 commands:
   stackmarket:
       description: All commands belonging to StackMarket.
-      usage: See /business help for list of commands available to you.
+      usage: See /biz help for a list of commands available to you.
       aliases: [business, biz, company, market, sm, stack]
       permission: StackMarket.business
       permission-message: You don't have permission to use /business

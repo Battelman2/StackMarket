@@ -1,13 +1,49 @@
 # StackMarket Configuration File
 #
+# If this file is corrupted, delete it and restart the server to create a fresh one.
+#
 # All comments (lines ignored by server) are denoted with the # prefix such as this one.
 # Please do not add or removing #s to existing lines.
 #
 
-# Database Configuration. Do not change unless needed.
+#######################################################
+# Database Configuration. Do not change unless needed.#
+#######################################################
 database:
   username: bukkit
   isolation: SERIALIZABLE
   driver: org.sqlite.JDBC
   password: walrus
   url: jdbc:sqlite:{DIR}{NAME}.db
+
+#######################################################
+# General Configuration.                              #
+#######################################################
+
+# For more information, see description below.
+
+land:
+  fixedmax: false
+business:
+  startcost:
+    sole: 100
+    llc: 250
+    corp: 1000
+stockmarket:
+  public: true
+  commission: 9
+
+###########################################################################################################################
+# General Config description. This is simply to explain the config nodes above. Changes in here will not affect plugin.   #
+# To edit these configurations, use the nodes above this section.                                                         #
+# land:                                                                                                                   #
+#   fixedmax: Do all businesses have the same maximum number of chunks to claim? Default: false                           #
+# business:                                                                                                               #
+#   startcost:                                                                                                            #
+#     sole: Cost payed by player to start a sole proprietorship. Default: 100                                             #
+#     llc: Cost payed by player to start a limited liability company. Default: 100                                        #
+#     corp: Cost payed by player to start a corporation. Default: 1000                                                    #
+# stockmarket:                                                                                                            #
+#   public: Is there to be a public trading stock market. If false, corporations can still trade privately. Default: true #
+#   commission: How much does it cost a player to make a transaction in the stock market. Default: 9                      #
+###########################################################################################################################

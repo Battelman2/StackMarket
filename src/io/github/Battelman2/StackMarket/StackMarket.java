@@ -21,7 +21,7 @@ public class StackMarket extends JavaPlugin
 
     public void onLoad()
     {
-        getLogger().info(getDescription().getName() + " has been loaded with version 0.0.1.");
+        getLogger().info(getDescription().getName() + " has been loaded with version " + getDescription().getVersion());
     }
 
     public void onEnable()
@@ -33,7 +33,7 @@ public class StackMarket extends JavaPlugin
         getLogger().info(getDescription().getName() + " is loading its database. Ignore messages between now and completion.");
         setupDatabase();
 
-        StackMarketCommandExecutor commandExecutor = new StackMarketCommandExecutor(this);
+        StackMarketCommandDirector commandExecutor = new StackMarketCommandDirector(this);
 
         getCommand("stackmarket").setExecutor(commandExecutor);
 
@@ -50,14 +50,18 @@ public class StackMarket extends JavaPlugin
         return plugin;
     }
 
-    private void setupDatabase() {
+    private void setupDatabase()
+    {
         Configuration config = getConfig();
 
-        database = new MyDatabase(this) {
-            protected java.util.List<Class<?>> getDatabaseClasses() {
+        database = new MyDatabase(this)
+        {
+            protected java.util.List<Class<?>> getDatabaseClasses()
+            {
                 List<Class<?>> list = new ArrayList<Class<?>>();
                 list.add(Business.class);
                 list.add(Employee.class);
+                list.add(ClaimedLand.class);
 
                 return list;
             };
