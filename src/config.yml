@@ -32,6 +32,8 @@ business:
 stockmarket:
   public: true
   commission: 9
+misc:
+  defaultlistsort: date
 
 ###########################################################################################################################
 # General Config description. This is simply to explain the config nodes above. Changes in here will not affect plugin.   #
@@ -46,4 +48,11 @@ stockmarket:
 # stockmarket:                                                                                                            #
 #   public: Is there to be a public trading stock market. If false, corporations can still trade privately. Default: true #
 #   commission: How much does it cost a player to make a transaction in the stock market. Default: 9                      #
+# misc:                                                                                                                   #
+#   defaultlistsort: How to sort businesses on the /biz list command. Values: date, bank, name, online. Default: date     #
 ###########################################################################################################################
+
+donotchange:
+  businesses:
+  employees:
+  jobs:

@@ -22,6 +22,14 @@ public class GeneralCommandExecutor
         {
             return general_help(sender, args);
         }
+        else if(args[0].equalsIgnoreCase("globalstats"))
+        {
+            return general_globalstats(sender, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("list"))
+        {
+            return general_list(sender, args, plugin);
+        }
 
         return false;
     }
@@ -132,5 +140,71 @@ public class GeneralCommandExecutor
             return true;
         }
 
+    }
+
+    public boolean general_globalstats(CommandSender sender, StackMarket plugin)
+    {
+
+            sender.sendMessage(ChatColor.GOLD + "- StackMarket Global Statistics -");
+            sender.sendMessage(ChatColor.GREEN + "Number of businesses: ");
+            sender.sendMessage(ChatColor.GREEN + "Number of employed players: ");
+            sender.sendMessage(ChatColor.GREEN + "Number of jobs: ");
+
+            return true;
+    }
+
+    public boolean general_list(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        if (args.length == 1)
+        {
+
+            if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("date"))
+            {
+                sender.sendMessage(ChatColor.GOLD + "- StackMarket Businesses -");
+                for (int i = 0; i < plugin.getConfig().getInt("donotchange.businesses") && i < 5; i++)
+                {
+
+                }
+            }
+            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("bank"))
+            {
+
+            }
+            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("name"))
+            {
+
+            }
+            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("online"))
+            {
+
+            }
+
+            return true;
+        }
+        else if (args.length == 2)
+        {
+            if(args[1].equalsIgnoreCase("date") || args[1].equalsIgnoreCase("time"))
+            {
+
+            }
+            else if(args[1].equalsIgnoreCase("bank") || args[1].equalsIgnoreCase("money"))
+            {
+
+            }
+            else if(args[1].equalsIgnoreCase("name"))
+            {
+
+            }
+            else if(args[1].equalsIgnoreCase("online") || args[1].equalsIgnoreCase("players"))
+            {
+
+            }
+        }
+        else
+        {
+
+        }
+        return false;
     }
 }
