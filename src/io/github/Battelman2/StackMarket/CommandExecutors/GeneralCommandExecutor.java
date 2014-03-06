@@ -174,4 +174,44 @@ public class GeneralCommandExecutor
 
         return true;
     }
+
+    public boolean general_acceptshares(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean general_resume(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean general_stats(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean general_types(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean general_merging(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
 }
