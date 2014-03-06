@@ -1,6 +1,7 @@
 package io.github.Battelman2.StackMarket.CommandExecutors;
 
 import io.github.Battelman2.StackMarket.StackMarket;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 
@@ -21,6 +22,38 @@ public class AdminCommandExecutor
         return false;
     }
 
+
+    public boolean admin_changeowner(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean admin_changetype(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean admin_fine(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
+
+    public boolean admin_closebusiness(CommandSender sender, String[] args, StackMarket plugin)
+    {
+
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
+
+        return true;
+    }
 
 
 }
