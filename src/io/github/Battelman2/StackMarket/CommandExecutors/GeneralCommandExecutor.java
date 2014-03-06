@@ -1,5 +1,6 @@
 package io.github.Battelman2.StackMarket.CommandExecutors;
 
+import io.github.Battelman2.StackMarket.Business;
 import io.github.Battelman2.StackMarket.StackMarket;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -145,10 +146,7 @@ public class GeneralCommandExecutor
     public boolean general_globalstats(CommandSender sender, StackMarket plugin)
     {
 
-            sender.sendMessage(ChatColor.GOLD + "- StackMarket Global Statistics -");
-            sender.sendMessage(ChatColor.GREEN + "Number of businesses: ");
-            sender.sendMessage(ChatColor.GREEN + "Number of employed players: ");
-            sender.sendMessage(ChatColor.GREEN + "Number of jobs: ");
+            sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
 
             return true;
     }
@@ -156,55 +154,24 @@ public class GeneralCommandExecutor
     public boolean general_list(CommandSender sender, String[] args, StackMarket plugin)
     {
 
-        if (args.length == 1)
-        {
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
 
-            if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("date"))
-            {
-                sender.sendMessage(ChatColor.GOLD + "- StackMarket Businesses -");
-                for (int i = 0; i < plugin.getConfig().getInt("donotchange.businesses") && i < 5; i++)
-                {
+        return true;
+    }
 
-                }
-            }
-            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("bank"))
-            {
+    public boolean general_buy(CommandSender sender, String[] args, StackMarket plugin)
+    {
 
-            }
-            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("name"))
-            {
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
 
-            }
-            else if(plugin.getConfig().getString("misc.defaultlistsort").equalsIgnoreCase("online"))
-            {
+        return true;
+    }
 
-            }
+    public boolean general_payinvoice(CommandSender sender, String[] args, StackMarket plugin)
+    {
 
-            return true;
-        }
-        else if (args.length == 2)
-        {
-            if(args[1].equalsIgnoreCase("date") || args[1].equalsIgnoreCase("time"))
-            {
+        sender.sendMessage(ChatColor.RED + "This command will be implemented in the future.");
 
-            }
-            else if(args[1].equalsIgnoreCase("bank") || args[1].equalsIgnoreCase("money"))
-            {
-
-            }
-            else if(args[1].equalsIgnoreCase("name"))
-            {
-
-            }
-            else if(args[1].equalsIgnoreCase("online") || args[1].equalsIgnoreCase("players"))
-            {
-
-            }
-        }
-        else
-        {
-
-        }
-        return false;
+        return true;
     }
 }
