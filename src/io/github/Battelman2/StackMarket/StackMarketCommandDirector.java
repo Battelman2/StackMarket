@@ -74,7 +74,7 @@ public class StackMarketCommandDirector implements CommandExecutor
             else
             {
 
-                sender.sendMessage(ChatColor.GRAY + plugin.getDescription().getName() + " is " + ChatColor.GREEN + " ENABLED " + ChatColor.GRAY + " with version " + ChatColor.AQUA +  plugin.getDescription().getVersion());
+                sender.sendMessage(ChatColor.GRAY + plugin.getDescription().getName() + " is " + ChatColor.GREEN + "ENABLED" + ChatColor.GRAY + " with version " + ChatColor.AQUA +  plugin.getDescription().getVersion());
                 sender.sendMessage(ChatColor.GRAY + "See " + ChatColor.AQUA + "/biz help" + ChatColor.GRAY + " for available commands.");
 
                 return true;
