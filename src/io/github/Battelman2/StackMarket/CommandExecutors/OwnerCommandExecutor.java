@@ -18,6 +18,76 @@ public class OwnerCommandExecutor
     public boolean executeCommand(CommandSender sender, Command cmd, String string, String[] args, StackMarket plugin)
     {
 
+        if(args[0].equalsIgnoreCase("create"))
+        {
+            return owner_create(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("hire"))
+        {
+            return owner_hire(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("fire"))
+        {
+            return owner_fire(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("claim"))
+        {
+            return owner_create(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("unclaim"))
+        {
+            return owner_unclaim(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("merge"))
+        {
+            return owner_merge(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("payrate"))
+        {
+            return owner_payrate(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("paycycle"))
+        {
+            return owner_paycycle(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("bonus"))
+        {
+            return owner_bonus(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("shares"))
+        {
+            return owner_shares(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("hours"))
+        {
+            return owner_hours(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("promote"))
+        {
+            return owner_promote(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("demote"))
+        {
+            return owner_demote(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("hiring"))
+        {
+            return owner_hiring(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("job"))
+        {
+            return owner_job(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("owner"))
+        {
+            return owner_owner(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("close"))
+        {
+            return owner_close(sender, args, plugin);
+        }
+
+
         return false;
     }
 

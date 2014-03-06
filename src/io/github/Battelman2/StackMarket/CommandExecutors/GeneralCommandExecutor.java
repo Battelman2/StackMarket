@@ -31,6 +31,34 @@ public class GeneralCommandExecutor
         {
             return general_list(sender, args, plugin);
         }
+        else if(args[0].equalsIgnoreCase("buy"))
+        {
+            return general_buy(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("payinvoice"))
+        {
+            return general_payinvoice(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("acceptshare"))
+        {
+            return general_acceptshares(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("resume"))
+        {
+            return general_resume(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("stats"))
+        {
+            return general_stats(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("types"))
+        {
+            return general_types(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("merging"))
+        {
+            return general_merging(sender, args, plugin);
+        }
 
         return false;
     }

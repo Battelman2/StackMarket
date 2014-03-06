@@ -18,6 +18,23 @@ public class EmployeeCommandExecutor
     public boolean executeCommand(CommandSender sender, Command cmd, String string, String[] args, StackMarket plugin)
     {
 
+        if(args[0].equalsIgnoreCase("apply"))
+        {
+            return employee_apply(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("paystub"))
+        {
+            return employee_paystub(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("quit"))
+        {
+            return employee_quit(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("shift"))
+        {
+            return employee_shift(sender, args, plugin);
+        }
+
         return false;
     }
 

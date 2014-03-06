@@ -19,6 +19,23 @@ public class AdminCommandExecutor
     public boolean executeCommand(CommandSender sender, Command cmd, String string, String[] args, StackMarket plugin)
     {
 
+        if(args[0].equalsIgnoreCase("changeowner"))
+        {
+            return admin_changeowner(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("changetype"))
+        {
+            return admin_changetype(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("fine"))
+        {
+            return admin_fine(sender, args, plugin);
+        }
+        else if(args[0].equalsIgnoreCase("closebusiness"))
+        {
+            return admin_closebusiness(sender, args, plugin);
+        }
+
         return false;
     }
 
