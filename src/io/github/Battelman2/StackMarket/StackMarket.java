@@ -17,6 +17,10 @@ public class StackMarket extends JavaPlugin
 
     private static StackMarket plugin;
 
+    private int numBusinesses;
+    private int numEmployees;
+    private int numJobs;
+
     private MyDatabase database;
 
     public void onLoad()
@@ -85,6 +89,36 @@ public class StackMarket extends JavaPlugin
     public EbeanServer getDatabase()
     {
         return database.getDatabase();
+    }
+
+    public int getNumJobs()
+    {
+        return numJobs;
+    }
+
+    public void setNumJobs(int numJobs)
+    {
+        this.numJobs = numJobs;
+    }
+
+    public int getNumBusinesses()
+    {
+        return numBusinesses;
+    }
+
+    public void setNumBusinesses(int numBusinesses)
+    {
+        this.numBusinesses = numBusinesses;
+    }
+
+    public int getNumEmployees()
+    {
+        return numEmployees;
+    }
+
+    public void setNumEmployees(int numEmployees)
+    {
+        this.numEmployees = numEmployees;
     }
 
 }
