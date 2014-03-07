@@ -4,6 +4,7 @@ import com.avaje.ebean.EbeanServer;
 import com.lennardf1989.bukkitex.MyDatabase;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.java.JavaPlugin;
+import sun.security.provider.SHA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,6 +67,8 @@ public class StackMarket extends JavaPlugin
                 list.add(Business.class);
                 list.add(Employee.class);
                 list.add(ClaimedLand.class);
+                list.add(Stock.class);
+                list.add(Share.class);
 
                 return list;
             };
@@ -78,7 +81,7 @@ public class StackMarket extends JavaPlugin
                 config.getString("database.password","walrus"),
                 config.getString("database.isolation","SERIALIZABLE"),
                 config.getBoolean("database.logging", false),
-                config.getBoolean("database.rebuild", true)
+                config.getBoolean("database.rebuild", false)
         );
 
         config.set("database.rebuild", false);

@@ -33,7 +33,7 @@ public class Business
      * @param _name Name of business searching for.
      * @return
      */
-    public static Business getLandFromDatabaseUsingName(String _name)
+    public static Business getBusinessFromDatabaseUsingName(String _name)
     {
         return StackMarket.plugin().getDatabase().find(Business.class)
                 .where()
@@ -52,7 +52,7 @@ public class Business
 
     public enum types
     {
-        SOLEPROPRIETORSHIP(0, 1, false, "Sole Proprietorship"),
+        SOLEPROPRIETORSHIP(0, 1, false, "Proprietorship"),
         LIMITEDLIABILITYCOMPANY(1, 3, false, "LLC"),
         CORPORATION(2, 1, true, "Corporation");
 

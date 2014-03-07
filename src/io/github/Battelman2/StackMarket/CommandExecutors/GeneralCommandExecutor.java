@@ -126,14 +126,14 @@ public class GeneralCommandExecutor
                 sender.sendMessage(ChatColor.AQUA + "/biz merge " + ChatColor.DARK_AQUA +"<business>" + ChatColor.GOLD + " See \"/biz merging\" for info.");
                 sender.sendMessage(ChatColor.AQUA + "/biz payrate " + ChatColor.DARK_AQUA +"<rank> <amount per hour>" + ChatColor.GOLD + " Set a wage for a rank.");
                 sender.sendMessage(ChatColor.AQUA + "/biz paycycle " + ChatColor.DARK_AQUA +"<hour/day/week/month>" + ChatColor.GOLD + " Set payment distribution.");
-                sender.sendMessage(ChatColor.AQUA + "/biz bonus " + ChatColor.DARK_AQUA +"<player> <amount>" + ChatColor.GOLD + " Pay a one time bonus to a player.");
-                sender.sendMessage(ChatColor.AQUA + "/biz shares " + ChatColor.DARK_AQUA +"<give/sell> <player> <qty>" + ChatColor.GOLD + " Sell or give a player shares.");
-                sender.sendMessage(ChatColor.AQUA + "/biz hours " + ChatColor.DARK_AQUA +"<open/close/always> [militarytime]" + ChatColor.GOLD + " Set opening/closing hours.");
+                sender.sendMessage(ChatColor.AQUA + "/biz bonus " + ChatColor.DARK_AQUA +"<player> <amount>" + ChatColor.GOLD + " Pay a bonus to a player.");
+                sender.sendMessage(ChatColor.AQUA + "/biz shares " + ChatColor.DARK_AQUA +"<give/sell> <player> <qty>" + ChatColor.GOLD + " Sell/give shares.");
+                sender.sendMessage(ChatColor.AQUA + "/biz hours " + ChatColor.DARK_AQUA +"<open/close/always> [militarytime]" + ChatColor.GOLD + " Set hours.");
                 sender.sendMessage(ChatColor.AQUA + "/biz promote " + ChatColor.DARK_AQUA +"<player> [torank]" + ChatColor.GOLD + " Promote a player in a business.");
                 sender.sendMessage(ChatColor.AQUA + "/biz demote " + ChatColor.DARK_AQUA +"<player> [torank]" + ChatColor.GOLD + " Demote a player in a business.");
                 sender.sendMessage(ChatColor.AQUA + "/biz hiring " + ChatColor.DARK_AQUA +"<yes/no>" + ChatColor.GOLD + " Toggle hiring state of a business.");
-                sender.sendMessage(ChatColor.AQUA + "/biz job " + ChatColor.DARK_AQUA +"<offer/reject/rejectall> [player]" + ChatColor.GOLD + " Manage job opportunities.");
-                sender.sendMessage(ChatColor.AQUA + "/biz owner " + ChatColor.DARK_AQUA +"<add/set/remove> <player>" + ChatColor.GOLD + " Manage business owners.");
+                sender.sendMessage(ChatColor.AQUA + "/biz job " + ChatColor.DARK_AQUA +"<offer/reject/rejectall> [player]" + ChatColor.GOLD + " Manage jobs.");
+                sender.sendMessage(ChatColor.AQUA + "/biz owner " + ChatColor.DARK_AQUA +"<add/set/remove> <player>" + ChatColor.GOLD + " Manage owners.");
                 sender.sendMessage(ChatColor.AQUA + "/biz close " + ChatColor.DARK_AQUA +"confirm" + ChatColor.GOLD + " Close and delete a business.");
 
 

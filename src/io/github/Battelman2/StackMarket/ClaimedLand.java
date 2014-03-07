@@ -19,7 +19,7 @@ public class ClaimedLand
     private int id;
 
     @NotNull
-    private String bizName;
+    private int bid;
 
     @NotNull
     private String worldName;
@@ -33,26 +33,26 @@ public class ClaimedLand
 
     /**
      * Factory method that creates a new ClaimedLand instance given an owner business name and chunk
-     * @param _bizName The business that claimed the land.
+     * @param bid The business that claimed the land.
      * @param _c The chunk this land represents
      * @return ClaimedLand
      */
-    public static ClaimedLand landFromProperties(String _bizName, Chunk _c)
+    public static ClaimedLand landFromProperties(int bid, Chunk _c)
     {
         ClaimedLand lnd = new ClaimedLand();
-        lnd.setProperties(_bizName, _c);
+        lnd.setProperties(bid, _c);
         return lnd;
 
     }
 
     /**
      * Sets the properties of an ClaimedLand instance
-     * @param _bizName name of the owning business
+     * @param bid id of the owning business
      * @param c chunk to be represented
      */
-    public void setProperties(String _bizName, Chunk c)
+    public void setProperties(int bid, Chunk c)
     {
-        this.setBizName(_bizName);
+        this.setBid(bid);
         this.setX(c.getX());
         this.setZ(c.getZ());
         this.setWorldName(c.getWorld().getName());
@@ -68,14 +68,14 @@ public class ClaimedLand
         this.id = id;
     }
 
-    public String getBizName()
+    public int getBid()
     {
-        return bizName;
+        return bid;
     }
 
-    public void setBizName(String bizName)
+    public void setBid(int bid)
     {
-        this.bizName = bizName;
+        this.bid = bid;
     }
 
     public String getWorldName()

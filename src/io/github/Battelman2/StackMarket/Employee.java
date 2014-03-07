@@ -24,7 +24,7 @@ public class Employee
      * @param _rank The rank in said business.
      * @return Employee
      */
-    public static Employee employeeFromProperties(int _bid, boolean _onShift, String _name, String _rank)
+    public static Employee employeeFromProperties(int _bid, boolean _onShift, String _name, int _rank)
     {
         Employee employee = new Employee();
         employee.setProperties(_bid, _onShift, _name, _rank);
@@ -43,7 +43,7 @@ public class Employee
     private String name;
 
     @NotNull
-    private String rank;
+    private int rank;
 
     /**
      * Sets the properties of an Employee instance
@@ -51,7 +51,7 @@ public class Employee
      * @param _name The name of the employee.
      * @param _rank The rank in said business.
      */
-    public void setProperties(int _bid, boolean _onShift, String _name, String _rank)
+    public void setProperties(int _bid, boolean _onShift, String _name, int _rank)
     {
         this.setBid(_bid);
         this.setShift(_onShift);
@@ -99,12 +99,12 @@ public class Employee
         this.name = name;
     }
 
-    public String getRank()
+    public int getRank()
     {
         return rank;
     }
 
-    public void setRank(String rank)
+    public void setRank(int rank)
     {
         this.rank = rank;
     }
