@@ -106,7 +106,7 @@ public class OwnerCommandExecutor
             if(args.length == 3)
             {
 
-                if(args[2].equalsIgnoreCase("sole"))
+                if(args[2].equalsIgnoreCase("sole") || args[2].equalsIgnoreCase("sp") || args[2].equalsIgnoreCase("proprietor") || args[2].equalsIgnoreCase("proprietorship"))
                 {
 
                     if(args[1].matches("^[a-zA-Z0-9]*$"))
@@ -121,7 +121,7 @@ public class OwnerCommandExecutor
 
                             plugin.getDatabase().save(newBiz);
 
-                            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + sender.getName() + " has just created " + args[1] + " Sole Proprietorship!");
+                            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + sender.getName() + " has just founded " + args[1] + " Sole Proprietorship!");
 
                             Employee newEmployee = Employee.employeeFromProperties(newBiz.getId(), true, sender.getName(), Ranks.OWNER.getDbname());
 
@@ -148,13 +148,85 @@ public class OwnerCommandExecutor
                     }
 
                 }
-                else if(args[2].equalsIgnoreCase("llc"))
+                else if(args[2].equalsIgnoreCase("llc") || args[2].equalsIgnoreCase("limited") || args[2].equalsIgnoreCase("liability") || args[2].equalsIgnoreCase("limitedliability") || args[2].equalsIgnoreCase("limitedliabilitycompany"))
                 {
-                    return true;
+                    if(args[1].matches("^[a-zA-Z0-9]*$"))
+                    {
+
+                        Business compare = Business.getBusinessFromDatabaseUsingName(args[1]);
+
+                        if (compare == null)
+                        {
+
+                            Business newBiz = Business.businessFromProperties(args[1], Business.types.LIMITEDLIABILITYCOMPANY.getTypeInt());
+
+                            plugin.getDatabase().save(newBiz);
+
+                            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + sender.getName() + " has just founded " + args[1] + " Limited Liability Company!");
+
+                            Employee newEmployee = Employee.employeeFromProperties(newBiz.getId(), true, sender.getName(), Ranks.OWNER.getDbname());
+
+                            sender.sendMessage(ChatColor.DARK_AQUA + "You are now the owner of " + args[1] + " Liability Company. You are now on shift.");
+
+                            return true;
+
+                        }
+                        else
+                        {
+
+                            sender.sendMessage(ChatColor.RED + args[1] + " already exists. Try using a different name.");
+
+                            return true;
+                        }
+
+                    }
+                    else
+                    {
+
+                        sender.sendMessage(ChatColor.RED + "Business names can only use letters and numbers.");
+
+                        return true;
+                    }
                 }
-                else if(args[2].equalsIgnoreCase("corp"))
+                else if(args[2].equalsIgnoreCase("corp") || args[2].equalsIgnoreCase("corporation"))
                 {
-                    return true;
+                    if(args[1].matches("^[a-zA-Z0-9]*$"))
+                    {
+
+                        Business compare = Business.getBusinessFromDatabaseUsingName(args[1]);
+
+                        if (compare == null)
+                        {
+
+                            Business newBiz = Business.businessFromProperties(args[1], Business.types.CORPORATION.getTypeInt());
+
+                            plugin.getDatabase().save(newBiz);
+
+                            Bukkit.getServer().broadcastMessage(ChatColor.GREEN + sender.getName() + " has just founded " + args[1] + " Corporation!");
+
+                            Employee newEmployee = Employee.employeeFromProperties(newBiz.getId(), true, sender.getName(), Ranks.OWNER.getDbname());
+
+                            sender.sendMessage(ChatColor.DARK_AQUA + "You are now the CEO of " + args[1] + " Corporation. You are now on shift.");
+
+                            return true;
+
+                        }
+                        else
+                        {
+
+                            sender.sendMessage(ChatColor.RED + args[1] + " already exists. Try using a different name.");
+
+                            return true;
+                        }
+
+                    }
+                    else
+                    {
+
+                        sender.sendMessage(ChatColor.RED + "Business names can only use letters and numbers.");
+
+                        return true;
+                    }
                 }
                 else
                 {
